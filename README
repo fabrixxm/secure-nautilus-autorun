@@ -1,0 +1,29 @@
+Secure Nautilus Autorun - v0.1
+------------------------------
+
+secure-nautilus-autorun is a "extended" version of nautilus-autorun-software 
+written in python.
+Most of the code is a translation in python of original C code.
+
+Differences
+-----------
+
+When secure-nautilus-autorun starts, search an autorun script according to
+freedesktop specs (.autorun, autorun, autorun.sh ).
+If it found one, search for <filename>.gpg, a gpg sign of autorun script.
+
+If the sign doesn't exist or is not valid, secure-nautilus-autorun shows to the
+user the same confirmation dialog as nautilus-autorun-software.
+
+If the sign is valid, a note about signer and a button to show details of the
+sign is added to the confirmation dialog.
+
+If the sign is valid and the key used to sign is in user's private keyring,
+the script is executed without confirmation
+
+Authors
+-------
+Fabio Comuni <fabrix.xm@gmail.com>
+
+Original C code Copyright (C) 2008 Red Hat, Inc.
+Author: David Zeuthen <davidz@redhat.com>
