@@ -1,0 +1,38 @@
+
+Requirements
+----------------------------
+python>=2.4 (tested on 2.6 )
+gnupg
+python-gnupg    http://code.google.com/p/python-gnupg/
+pygtk
+gnome-python
+
+
+
+Install
+----------------------------
+1
+---
+Copy 'src/secure-nautilus-autorun.py' to a convenient path, rename without .py 
+and made id executable
+
+cp src/secure-nautilus-autorun.py ~/bin/secure-nautilus-autorun
+chmod +x ~/bin/secure-nautilus-autorun
+
+
+2
+---
+Copy secure-nautilus-autorun.desktop to '~/.local/share/applications'.
+Edit '~/.local/share/applications/secure-nautilus-autorun.desktop' and replace
+path to your 'secure-nautilus-autorun'
+
+3
+---
+Edit '~/.local/share/applications/mimeapps.list' and replace all
+nautilus-autorun-software.desktop
+with
+secure-nautilus-autorun.desktop
+
+4
+---
+Restart your session (logout-login)
