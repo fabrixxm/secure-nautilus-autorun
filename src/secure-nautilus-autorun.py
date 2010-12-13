@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- encoding: utf-8 -*-
 """ secure-nautilus-autorun
 
@@ -62,7 +62,7 @@ def checkfile(mount_root, file_path, must_be_executable):
         return False
     
     if must_be_executable and not file_info.get_attribute_boolean(gio.FILE_ATTRIBUTE_ACCESS_CAN_EXECUTE):
-        return false
+        return False
     
     return True
 
